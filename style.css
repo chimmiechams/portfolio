@@ -41,7 +41,7 @@ html {
 
 * {
     box-sizing: border-box;
-    color: #d36f73;
+    color: #be6266;
 }
 
 body {
@@ -103,9 +103,9 @@ a:active {
 }
 
 ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 0;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
 }
 
 li {
@@ -164,7 +164,7 @@ li {
 .header {
     min-height: 500px;
 
-    padding: 0px 200px;
+    padding: 0px 10%;
     margin: 20px 0px 60px 0px;
 
     display: flex;
@@ -175,7 +175,7 @@ li {
 .header>div:first-of-type {
     width: 25%;
     max-width: 500px;
-    margin-right: var(--spacing);
+    margin-right: 50px;
     text-align: left;
 }
 
@@ -269,13 +269,33 @@ li {
     margin-right: 0px;
 }
 
+.achievements .row div {
+    width: 33.33%;
+    text-align: left;
+}
+
 .highlights .row div {
     width: 33.33%;
     text-align: center;
 }
 
-.highlights .row>div:nth-of-type(2){
+
+.achievements .row>div:nth-of-type(2) {
     margin: 0px var(--spacing);
+}
+
+.highlights .row>div:nth-of-type(2) {
+    margin: 0px 50px;
+}
+
+.CertiGall div {
+    width: 33%;
+    margin-right: 20px;
+}
+
+.CertiGall img,
+.highlights img {
+    margin-bottom: 10px;
 }
 
 /* IMAGE GALLERY -------------------------------------------------- */
@@ -345,8 +365,23 @@ li {
         --spacing: 0px;
     }
 
+    .header {
+        min-height: 500px;
+
+        padding: 0px 10%;
+        margin: 20px 0px 60px 0px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header {
+        padding: 0 5%;
+    }
+
     body {
-        font-size: 12px;
+        font-size: 14px;
 
         margin: 0px;
 
@@ -380,6 +415,20 @@ li {
     .row {
         -webkit-flex-direction: column;
         flex-direction: column;
+    }
+
+    .row div {
+        width: 100% !important;
+    }
+
+    .skills .row:nth-child(3) div:nth-child(2),
+    .skills .row:nth-child(2) div:nth-child(1),
+    .skills .row:nth-child(2) div:nth-child(3) {
+        padding: 20px;
+    }
+
+    .achievements h1 {
+        margin-top: 50px;
     }
 
     .footer {
