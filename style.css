@@ -2,6 +2,7 @@
     --spacing: 30px;
     --padding: 25px;
     --screen: 0px 80px;
+    --color: #be6266;
 }
 
 
@@ -41,7 +42,7 @@ html {
 
 * {
     box-sizing: border-box;
-    color: #be6266;
+    color: var(--color);
 }
 
 body {
@@ -64,7 +65,7 @@ img {
 
 hr {
     color: transparent;
-    border-bottom: 3px dotted #d36f73;
+    border-bottom: 3px dotted var(--color);
 }
 
 h1,
@@ -274,18 +275,23 @@ li {
     text-align: left;
 }
 
+.achievements .row>div:nth-of-type(2) {
+    margin: 0px var(--spacing);
+    padding: 0 var(--spacing);
+    border: dotted var(--color);
+    border-width: 0 3px 0 3px;
+}
+
 .highlights .row div {
     width: 33.33%;
     text-align: center;
 }
 
-
-.achievements .row>div:nth-of-type(2) {
-    margin: 0px var(--spacing);
-}
-
 .highlights .row>div:nth-of-type(2) {
-    margin: 0px 50px;
+    margin: 0px 3var(--spacing);
+    padding: 0 var(--spacing);
+    border: dotted var(--color);
+    border-width: 0 3px 0 3px;
 }
 
 .CertiGall div {
@@ -429,6 +435,22 @@ li {
 
     .achievements h1 {
         margin-top: 50px;
+    }
+
+    .achievements .row>div:nth-of-type(2) {
+        margin: 0px;
+        padding: 0;
+        border: none;
+    }
+
+    .highlights div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .highlights .row>div:nth-of-type(2) {
+        margin: 0;
+        border: none;
     }
 
     .footer {
