@@ -288,7 +288,7 @@ li {
 }
 
 .highlights .row>div:nth-of-type(2) {
-    margin: 0px 3var(--spacing);
+    margin: 0px var(--spacing);
     padding: 0 var(--spacing);
     border: dotted var(--color);
     border-width: 0 3px 0 3px;
