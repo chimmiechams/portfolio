@@ -213,7 +213,6 @@ li {
 /* FLEXBOX -------------------------------------------------- */
 .row {
     display: -webkit-flex;
-    display: flex;
 }
 
 
@@ -237,6 +236,11 @@ li {
     padding: var(--screen);
 }
 
+.skills .row {
+    display: flex;
+    align-items: center;
+}
+
 .skills .row div {
     width: 33.33%;
 
@@ -247,6 +251,7 @@ li {
 
     border: none;
     border-image-source: none;
+
 }
 
 .skills .row:nth-child(3) div:nth-child(2),
@@ -300,10 +305,9 @@ li {
 
 /* IMAGE GALLERY -------------------------------------------------- */
 .toggle-btn {
-    display: inline-flex;
-    align-items: center;
+    width: 32%;
     gap: 10px;
-    background-color: #007bff;
+    background-color: transparent;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -313,10 +317,14 @@ li {
     border-radius: 4px;
     font-size: 14px;
     transition: background-color 0.2s ease;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .toggle-btn:hover {
-    background-color: #0056b3;
+    font-style: italic;
 }
 
 .toggle-btn img {
@@ -329,9 +337,6 @@ li {
     height: 0;
     opacity: 0;
     overflow: hidden;
-    background-color: #eef2f7;
-    border-left: 4px solid #007bff;
-    border-radius: 0 4px 4px 0;
     transition: height 1.5s cubic-bezier(0.1, 0.9, 0.2, 1);
     opacity: 0.35s ease-out;
 }
@@ -340,9 +345,30 @@ li {
     padding: var(--padding);
 }
 
-/* 3. Injected by JS to initiate the fade-in */
 .content-box.active {
     opacity: 1;
+}
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    width: 50%;
+    padding-bottom: var(--spacing);
+}
+
+td:nth-child(even) {
+    vertical-align: center;
+    text-align: center;
+    padding: var(--spacing);
 }
 
 /* FOOTER -------------------------------------------------- */
